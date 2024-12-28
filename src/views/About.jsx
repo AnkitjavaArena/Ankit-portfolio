@@ -59,8 +59,9 @@ const About = () => {
               }
             >
               Using a combination of cutting-edge technologies and reliable
-              open-source software I build user-focused, performant apps and
-              websites for smartphones, tablets, and desktops.
+              open-source software, As a  Java developer, 
+              my priority is to always build highly effective, Reliable and Low Maintenance systems/applications.
+              I am into springBoot and microservices development.
             </p>
           </motion.div>
           <motion.div className="flex flex-wrap mt-8 flex flex-wrap justify-between ">
