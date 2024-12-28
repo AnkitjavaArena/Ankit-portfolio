@@ -1,13 +1,13 @@
 export const techStack = [
-
-  { name: "Java", link: "/java.svg" },
-  { name: "SpringBoot", link: "/SpringBoot.svg" },
+  
+  { name: "Java", link: `${process.env.PUBLIC_URL}/java.svg` },
+  { name: "SpringBoot", link: `${process.env.PUBLIC_URL}/SpringBoot.svg` },
   { name: "Postman", link: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
   { name: "HTML", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
   { name: "CSS", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" },
   { name: "Bootstrap", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" },
   { name: "Javascript", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-  { name: "MySQl", link: "/mysql.svg" },
+  { name: "MySQl", link: `${process.env.PUBLIC_URL}/mysql.svg` },
   { name: "Mongo DB", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg" },
   { name: "Git", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg" },
   { name: "Docker", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain.svg" },
