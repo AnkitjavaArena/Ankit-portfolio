@@ -30,14 +30,20 @@ const About = () => {
                   : "mt-4 text-xl text-justify text-white"
               }
             >
-              I'm a self-taught web developer and Mobile App Developer with
-              experience in designing new features from ideation to production,
-              implementation of wireframes and design flows into high
-              performance software applications. I take into consideration the
-              user experience while writing reusable and efficient code. I
-              passionately combine good design, technology, and innovation in
-              all my projects, which I like to accompany from the first idea to
-              release.Currently, I'm focused on the backend development.
+              Software Developer, team player, and leader with versatile skillsets. I am experienced in building software products from scratch.
+              As a  Java developer, my priority is to always build highly effective, Reliable, Low Maintenance systems.
+              I extensively used the following languages, frameworks, modules to build the systems
+              Spring boot,
+              Spring web for building RESTFUL APIs,
+              Spring Data, Spring JPA for Database interactions.
+              Relational Databases like Mysql, Non-Relational Document databases like MongoDB.
+              Kafka for designing event-driven systems and also following Enterprise Integration Patterns using Spring Integration,
+              and other modules of SpringBoot.
+              Used Groovy and  Spock framework for unit testing the backend code,
+              Used Maven for handling the dependency management and as a build tool.
+              Used Docker and Docker compose to be able to run the services inside a container.
+              I always prefer to write well-organized, readable, manageable, and testable code.
+
             </p>
           </motion.div>
           <motion.div
