@@ -20,10 +20,6 @@ const Projects = () => {
         </h4>
         <div className="mt-8 flex justify-between items-stretch flex-wrap">
           <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
         </div>
         <a
           href="hello"
