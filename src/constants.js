@@ -3,7 +3,7 @@ export const techStack = [
   { name: "HTML", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
   { name: "CSS", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" },
   { name: "Javascript", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-  { name: "Angular with Typescript", link: `${process.env.PUBLIC_URL}/angular_icon.png` },
+  { name: "Angular", link: `${process.env.PUBLIC_URL}/angular_icon.png` },
 
   //Backend stack
   { name: "Java", link: `${process.env.PUBLIC_URL}/java.svg` },
@@ -39,13 +39,13 @@ export const contactLinks = [
 export const serviceData = [
   {
     name: 'Web Application Development',
-    desc: 'Todo',
+    desc: '',
     img: "https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png"
   },
 
   {
     name: 'Backend Development',
-    desc: `Todo`,
+    desc: ``,
     img: "https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-backend-no-code-flaticons-flat-flat-icons.png"
   }
 

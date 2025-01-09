@@ -61,7 +61,7 @@ const About = () => {
               Using a combination of cutting-edge technologies and reliable
               open-source software, As a  Java developer, 
               my priority is to always build highly effective, Reliable and Low Maintenance systems/applications.
-              I am into springBoot and microservices development.
+              I am into springBoot and microservices development. Kindly Download Resume to know more.
             </p>
           </motion.div>
           <motion.div className="flex flex-wrap mt-8 flex flex-wrap justify-between ">
