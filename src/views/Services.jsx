@@ -29,9 +29,10 @@ const Services = () => {
           <h4 className="mt-16 text-3xl font-semibold text-blue-500">
             What I Provide
           </h4>
-          <div className="mt-8 flex md:flex-row justify-evenly flex-col md:items-stretch items-center ">
+          <div className="mt-8 flex md:flex-row flex-wrap justify-center gap-8 flex-col md:items-stretch items-center ">
             {serviceData.map((el) => (
               <motion.div
+                key={el.name}
                 initial="hidden"
                 whileInView={"visible"}
                 variants={{
@@ -40,11 +41,11 @@ const Services = () => {
                 }}
                 className={
                   theme.state.darkMode
-                    ? "md:w-96 p-4 bg-white rounded-lg flex items-center flex-col mt-8"
-                    : "md:w-96 p-4 bg-gray-100 rounded-lg flex items-center flex-col mt-8"
+                    ? "md:w-80 p-4 bg-white rounded-lg flex items-center flex-col mt-8"
+                    : "md:w-80 p-4 bg-gray-100 rounded-lg flex items-center flex-col mt-8"
                 }
               >
-                <img src={el.img} alt="" />
+                <img src={el.img} alt={el.name} />
                 <h4 className="text-xl font-bold mt-4">{el.name}</h4>
                 <p className="text-lg mt-2 text-justify">{el.desc}</p>
               </motion.div>

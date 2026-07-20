@@ -1,10 +1,25 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { contactLinks } from "../constants";
 import { ThemeContext } from "../themeProvider";
 
 const Contact = () => {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(`Portfolio contact from ${form.name}`);
+    const body = encodeURIComponent(
+      `${form.message}\n\nFrom: ${form.name} (${form.email})`
+    );
+    window.location.href = `mailto:ankit.scrps@gmail.com?subject=${subject}&body=${body}`;
+  };
+
   return (
     <div
       id="contact"
@@ -30,11 +45,11 @@ const Contact = () => {
         </div>
         <div className="flex justify-between items-center md:items-stretch  flex-col md:flex-row pb-24">
           <div className="w-full md:pr-8">
-            <form>
-              <div class="my-6">
+            <form onSubmit={handleSubmit}>
+              <div className="my-6">
                 <label
-                  for="name"
-                  class={
+                  htmlFor="name"
+                  className={
                     darkMode
                       ? "block mb-2 text-lg font-medium text-gray-900"
                       : "block mb-2 text-lg font-medium text-white"
@@ -43,17 +58,20 @@ const Contact = () => {
                   Name
                 </label>
                 <input
-                  type="email"
+                  type="text"
                   id="name"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Enter your name"
                   required
                 />
               </div>
               <div className="mb-4">
                 <label
-                  for="email"
-                  class={
+                  htmlFor="email"
+                  className={
                     darkMode
                       ? "block mb-2 text-lg font-medium text-gray-900"
                       : "block mb-2 text-lg font-medium text-white"
@@ -64,15 +82,18 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Enter your email"
                   required
                 />
               </div>
               <div className="mb-4">
                 <label
-                  for="message"
-                  class={
+                  htmlFor="message"
+                  className={
                     darkMode
                       ? "block mb-2 text-lg font-medium text-gray-900"
                       : "block mb-2 text-lg font-medium text-white"
@@ -82,19 +103,20 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 h-28 w-full text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 h-28 w-full text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Enter your message"
                   required
                 />
               </div>
-              <div className="flex justify-between ">
-                <div className="underline">
-                  <a href="mailto:ankit.scrps@gmail.com">
-                    Send me email directly
-                  </a>
-                </div>
-                <button className="bg-indigo-500 text-white px-4 py-2 w-40 rounded-md hover:bg-indigo-400">
-                  <a href="mailto:ankit.scrps@gmail.com">Submit</a>
+              <div className="flex justify-end">
+                <button
+                  type="submit"
+                  className="bg-indigo-500 text-white px-4 py-2 w-40 rounded-md hover:bg-indigo-400"
+                >
+                  Submit
                 </button>
               </div>
             </form>
@@ -103,30 +125,29 @@ const Contact = () => {
 
             <h1 className="text-3xl font-bold">Email</h1>
             <a
-              href="hello"
+              href="mailto:ankit.scrps@gmail.com"
               className="mb-12 mt-4 font-semibold text-blue-700 block uppercase"
             >
               ankit.scrps@gmail.com
             </a>
             <h1 className="text-3xl  font-bold">Address</h1>
-            <a
-              href="hello"
-              className="mt-4  mb-12 md:text-right font-semibold text-blue-700 block uppercase"
-            >
+            <p className="mt-4 mb-12 md:text-right font-semibold text-blue-700 uppercase">
               Satna, Madhya Pradesh
               <br />
               India
-            </a>
+            </p>
 
             <h1 className="text-3xl  font-bold">Social</h1>
             <ul className="flex">
               {contactLinks.map((el) => (
                 <a
+                  key={el.name}
                   href={el.link}
+                  target="_blank"
+                  rel="noreferrer"
                   className="md:ml-6 md:mr-0 mr-6 cursor-pointer mt-4 hover:scale-125 flex flex-col justify-center items-center"
                 >
-                  <img alt="" src={el.url} />
-                  {/* <p className="text-md mt-2 hover:hidden">{el.name}</p> */}
+                  <img alt={el.name} src={el.url} />
                 </a>
               ))}
             </ul>
