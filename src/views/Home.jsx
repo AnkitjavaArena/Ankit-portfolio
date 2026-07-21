@@ -50,25 +50,27 @@ const Home = () => {
                   : "mt-3 text-base text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
               }
             >
-              I am a Back-End Java developer / Full-Stack Java Developer. I am currently working at Mastercom Technologies private limited as Java Full stack developer.
+              I'm a Backend Java Developer building reliable, scalable systems with Java, Spring Boot, and REST APIs — powering web, Android, and iOS applications alongside frontend and mobile teams. Currently working on microservices and event-driven architectures at Neosoft.
             </p>
             <div className="flex md:justify-start ">
               {contactLinks.map((el) => (
                 <a
+                  key={el.name}
                   href={el.link}
+                  target="_blank"
+                  rel="noreferrer"
                   className="mr-5 cursor-pointer mt-8 hover:scale-125"
                 >
-                  <img alt="" src={el.url} />
-                  {/* <p className="text-md mt-2 hover:hidden">{el.name}</p> */}
+                  <img alt={el.name} src={el.url} />
                 </a>
               ))}
             </div>
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-              <div className="mt-3 sm:mt-0 cursor-pointer w-1/2">
-                <a 
-                 href={`${process.env.PUBLIC_URL}/Ankit_Resume_Java.pdf`} // Update this path as per your file location
+              <div className="mt-3 sm:mt-0 cursor-pointer">
+                <a
+                 href={`${process.env.PUBLIC_URL}/Ankit_Resume_Java.pdf`}
                  download="Ankit_Resume_Java.pdf"
-                 className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 hover:bg-blue-200 md:py-4 md:text-lg md:px-10">
+                 className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 hover:bg-blue-400 transition-colors md:py-4 md:text-lg md:px-10">
                   Download Resume
                 </a>
               </div>

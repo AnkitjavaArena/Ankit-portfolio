@@ -2,13 +2,11 @@ import React from "react";
 
 const LoadingScreen = () => {
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div>
-        <img
-          src="https://cdn.dribbble.com/users/450343/screenshots/2465762/media/97b14be7af51dcea4d8ae244c545769b.gif"
-          alt=""
-        />
-      </div>
+    <div className="flex flex-col justify-center items-center h-screen bg-gray-900">
+      <div className="w-14 h-14 border-4 border-gray-700 border-t-blue-500 rounded-full animate-spin" />
+      <p className="mt-6 text-white text-lg font-medium tracking-wide">
+        Ankit Tripathi
+      </p>
     </div>
   );
 };
