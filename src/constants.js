@@ -207,7 +207,7 @@ export const projectData = [
   },
   {
     title: 'Wave – Multi-Tenant Restaurant Management Platform',
-    company: 'Sparx IT Solutions (Client: Wave)',
+    company: 'Neosoft (Client: Sparx IT Solutions)',
     tag: 'B2C Product',
     description: 'A B2C multi-tenant restaurant management platform that enables restaurants to streamline daily operations, including order management, reservations, customer engagement, and real-time communication. The platform is built with an offline-first architecture, ensuring uninterrupted restaurant operations during network outages while automatically synchronizing data once connectivity is restored.',
     contributions: [
@@ -227,12 +227,12 @@ export const projectData = [
   {
     title: 'Inventory Management System (ERP)',
     company: 'Freelance Product / Startup Initiative',
-    role: 'Founder, Solution Architect & Lead Backend Developer',
+    role: 'Solution Architect & Lead Backend Developer',
     tag: 'B2B Product',
     status: '🚧 Actively in Development',
     description: 'A B2B ERP platform designed to help manufacturers, wholesalers, and distributors manage inventory, procurement, warehouse operations, and business workflows. Built as a scalable, modern inventory management solution, the platform aims to streamline operations, improve inventory visibility, and support business growth.',
     contributions: [
-      'Founder, Solution Architect, and Lead Backend Developer, leading the product from concept through architecture, development, and technical execution.',
+      'Solution Architect and Lead Backend Developer, leading the product from concept through architecture, development, and technical execution.',
       'Designed the overall system architecture, multi-tenant strategy, and database schema to support scalable and maintainable business operations.',
       'Implemented the authentication and user management modules while establishing backend architecture, coding standards, and API design.',
       'Defined product workflows, user journeys, and business processes, ensuring a consistent experience across web and mobile applications.',
