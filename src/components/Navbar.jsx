@@ -50,30 +50,30 @@ const Navbar = () => {
       >
         <div className="flex justify-between items-center py-2 md:py-4 md:px-2 pl-2 mx-auto">
           <div className="flex items-center cursor-pointer">
-          <a
-  href="/"
-  className={`text-xl font-medium text-decoration-none whitespace-nowrap ${
-    darkMode ? "text-black" : "text-white"
-  }`}
-  style={{
-    fontFamily: `'Poppins', sans-serif`,
-    fontWeight: "600",
-    letterSpacing: "0.05em",
-    textShadow: darkMode ? "1px 1px 2px rgba(0, 0, 0, 0.3)" : "1px 1px 2px rgba(255, 255, 255, 0.3)",
-  }}
->
-  {}
-</a>
-
+            <Link
+              to="/"
+              spy={true}
+              smooth={true}
+              className={`text-xl font-medium whitespace-nowrap ${
+                darkMode ? "text-black" : "text-white"
+              }`}
+              style={{
+                fontFamily: `'Poppins', sans-serif`,
+                fontWeight: "600",
+                letterSpacing: "0.05em",
+              }}
+            >
+              Ankit Tripathi
+            </Link>
           </div>
-          <div class="hidden justify-between items-center w-full md:flex md:w-auto ">
+          <div className="hidden justify-between items-center w-full md:flex md:w-auto ">
             <ul
-              class={
+              className={
                 "flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium"
               }
             >
               {links.map((el) => (
-                <li className="cursor-pointer">
+                <li className="cursor-pointer" key={el.name}>
                   <Link
                     to={el.route}
                     activeClass={"text-white bg-blue-500"}
@@ -148,9 +148,10 @@ const Navbar = () => {
                 : "bg-black py-2 px-2 md:p-0 z-50 fixed top-16 mt-2 rounded-lg shadow-lg right-2 block w-40"
             }
           >
-            <ul class="md:hidden md:flex-row md:space-y-8 md:mt-0 md:text-md md:font-medium">
+            <ul className="md:hidden md:flex-row md:space-y-8 md:mt-0 md:text-md md:font-medium">
               {links.map((el) => (
                 <Link
+                  key={el.name}
                   to={el.route}
                   activeClass={"text-white bg-blue-500"}
                   className={
