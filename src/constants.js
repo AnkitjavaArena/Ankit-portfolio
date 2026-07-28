@@ -265,3 +265,66 @@ export const projectData = [
     confidential: false
   }
 ]
+
+export const experienceData = [
+  {
+    role: 'Senior Software Engineer',
+    company: 'NeoSoft Technologies, Noida (Client: Sparx IT Solutions)',
+    project: 'Wave — Multi-Tenant Restaurant Management Platform (B2C)',
+    duration: 'Jan 2026 – Present',
+    current: true,
+    points: [
+      'Lead backend development of Wave, owning architecture, design, and delivery of core backend services for order management, reservations, customer engagement, and real-time communication.',
+      'Designed and implemented a scalable multi-tenant ordering system handling concurrent orders with strict tenant-level data isolation and high performance.',
+      'Architected an offline-first solution using Eclipse Mosquitto (MQTT), enabling restaurants to keep operating during network outages with automatic data sync on reconnection.',
+      'Integrated Firebase Cloud Messaging (FCM) for real-time notifications and implemented event-driven communication using AWS SQS and AWS SNS.',
+      'Applied microservices architecture and Spring Boot best practices (Spring Data JPA, Hibernate, Flyway, MapStruct, Spring Security, JWT) to deliver maintainable backend modules.',
+      'Mentored junior engineers through code reviews, technical discussions, and architecture guidance.'
+    ]
+  },
+  {
+    role: 'Software Engineer',
+    company: 'MasterCom Technologies, Chennai (Client: Tata Communications Limited)',
+    project: 'Olio, Managed Hosting Service (MHS), Managed Security Services (MSS), Vayu Cloud',
+    duration: 'Aug 2024 – Dec 2025',
+    points: [
+      'Served as primary backend engineer on Vayu Cloud, owning end-to-end development and deployment of Snapshot Services and Backup Services.',
+      'Owned architecture, design, and delivery of the Managed Hosting Service (MHS) backend — BOQ processing, Quote Management, Customer Order Form (COF), Order Management, and workflow automation.',
+      'Implemented workflow-driven business processes using Flowable BPMN across MHS, MSS, and Vayu Cloud, automating multi-stage approvals, task assignments, contract generation, and provisioning.',
+      'Integrated platforms with the Geneva Billing System (Oracle) to automate billing after successful infrastructure provisioning.',
+      'Investigated production incidents on Olio and MSS by analyzing application logs, PostgreSQL/Redis health, and system metrics; diagnosed and resolved high-priority defects.',
+      'Led production deployments and release activities, and mentored team members while collaborating with business stakeholders.'
+    ]
+  },
+  {
+    role: 'Junior Associate Consultant',
+    company: 'Loyalty Methods, Hyderabad',
+    project: 'Loyalty Management System (B2B)',
+    duration: 'Jul 2022 – Feb 2024',
+    points: [
+      'Re-architected and replaced legacy Proxy and Digital services with a modern middleware built on Java 17 and Spring Boot, improving maintainability and reducing AWS infrastructure costs.',
+      'Developed a client-specific routing service that processed business rules, published events to Apache Kafka, and managed phased feature rollouts using Spring Cloud Config.',
+      'Built a reusable MongoDB library providing a common, extensible data access layer for multiple services.',
+      'Supported zero-downtime client onboarding by monitoring buffer and buffer-replay processes and providing deployment support.'
+    ]
+  }
+]
+
+export const educationData = [
+  {
+    degree: 'Master of Computer Applications (MCA)',
+    institution: 'Sunrise University',
+    duration: 'Apr 2023 – Aug 2025'
+  },
+  {
+    degree: 'Bachelor of Computer Science (BCS)',
+    institution: 'Mahatma Gandhi Chitrakoot University',
+    duration: 'Jul 2017 – Mar 2021'
+  }
+]
+
+export const certificationData = [
+  { name: 'Full Stack Java Training', issuer: 'NareshIT — Java, Spring Boot, Oracle SQL, Microservices Architecture' },
+  { name: 'NASSCOM Certified Java Backend Developer', issuer: 'NASSCOM' },
+  { name: 'PostgreSQL DBA Masterclass with Real-Time Projects', issuer: 'Udemy — Instructor: Rajamohan Masa' }
+]
